@@ -1,4 +1,11 @@
-﻿-- Core checks
+﻿-- queries.sql
+-- Purpose: Reusable SQL validation queries for the kdb Insights SDK project.
+-- Scope: Verifies equities data ingestion quality and basic analytics after q-based publish.
+-- Includes checks for row counts, distinct dates, date range, nulls, duplicates, distribution, and sample indicators.
+-- Table expected: equities
+
+
+-- Core checks
 SELECT COUNT(*) AS n FROM equities;
 SELECT COUNT(DISTINCT Date) AS d FROM equities;
 SELECT MIN(Date) AS min_dt, MAX(Date) AS max_dt FROM equities;
