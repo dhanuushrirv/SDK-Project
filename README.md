@@ -1,4 +1,4 @@
-﻿# kdb Insights DBRT: Equities Ingestion and Query Validation
+﻿# kdb Insights SDK : Equities Ingestion and Query Validation
 
 ## Project Summary
 This project documents the end-to-end setup and validation of a kdb Insights Docker Reference Deployment (DBRT) using a custom dataset (`dataSet.csv`) loaded into the `equities` table.
