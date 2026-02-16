@@ -32,7 +32,7 @@ cp /path/to/dataSet.csv /home/dhanuushri/kxi-db/config/dataSet.csv
 ```bash
 cd /home/dhanuushri/kxi-db
 mkdir -p data/logs/rt data/db
-chmod -R 777 data
+sudo chmod -R 777 data
 ```
 
 ## 2) Assembly Schema Changes
@@ -44,7 +44,7 @@ Important fix applied:
 ## 3) Start Deployment
 ```bash
 cd /home/dhanuushri/kxi-db
-docker compose up -d
+sudo docker compose up -d
 docker compose ps --services
 ```
 Expected services:
@@ -132,4 +132,8 @@ h(`.kxi.sql;enlist[`query]!enlist"SELECT BUYSELL, COUNT(*) AS c FROM equities GR
 ```bash
 cd /home/dhanuushri/kxi-db
 docker compose down
+```
+## 10) Remove logs while starting the next docker compose
+```
+sudo rm -rf data/logs/rt/* data/db/*
 ```
